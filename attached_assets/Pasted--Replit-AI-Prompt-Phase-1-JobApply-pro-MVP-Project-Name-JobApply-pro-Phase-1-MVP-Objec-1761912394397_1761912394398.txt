@@ -1,0 +1,75 @@
+# Replit AI Prompt — Phase 1: JobApply.pro MVP
+
+## Project Name
+JobApply.pro — Phase 1 MVP
+
+## Objective
+Build a job application platform with the following features:
+
+1. **User Authentication & Roles**
+   - Users can register and login
+   - Roles: `user`, `admin` (admin access to manage plans and CSV uploads)
+   - JWT or session-based auth (your choice of implementation)
+   - Protect admin routes; users cannot access admin functions
+
+2. **Plans Catalogue**
+   - Seeded plans:
+     - TRIAL_10 → 10 applications, £9
+     - APPS_150 → 150 applications, £79
+     - APPS_300 → 300 applications, £139
+     - APPS_500 → 500 applications, £199
+     - APPS_1000 → 1000 applications, £349
+     - CV_RETOUCH → service-only, £39
+   - Rules:
+     - Every 150 application credits = 7 calendar days processing
+   - Admin can create/edit/deactivate plans
+   - Public pricing page displays active plans with CTA buttons
+
+3. **Frontend Pages**
+   - `/register` → registration form
+   - `/login` → login form
+   - `/pricing` → plan listing
+   - All pages should be mobile-first and fully responsive
+
+4. **CSV Upload (Phase 1 placeholder)**
+   - Admin can upload CSV files to populate application statuses for each user (per-user, not general)
+
+5. **Dashboard (Phase 1 placeholder)**
+   - Users see which plans they purchased and credits remaining
+   - Placeholder for future application status view
+
+6. **Design & UI**
+   - Colour scheme: **blue (#0077FF), green (#22C55E), white (#FFFFFF), black (#111827), gray (#F3F4F6)**
+   - Clean, modern, intuitive, professional yet approachable
+   - Buttons, cards, forms, and layout should reflect this palette
+   - Mobile-first design is a core priority
+   - Use modern typography and spacing
+
+7. **Stack & Structure**
+   - Replit AI is free to choose the tech stack (frontend + backend) and folder structure
+   - Ensure modularity for easy expansion in future phases
+
+8. **Functionality Summary**
+   - Auth routes: register, login, get current user
+   - Plans routes: get public plans, admin CRUD operations
+   - Seed plans with correct SKUs and pricing
+   - Frontend forms: register, login, pricing cards with CTA buttons
+   - Placeholder for dashboard and CSV upload functionality
+
+## Deliverables
+- A fully functioning Phase 1 MVP of `jobapply.pro`
+- Authentication and roles fully implemented
+- Public pricing page with active plans
+- Admin CRUD for plans
+- Mobile-first, responsive UI matching colour palette
+- Code ready to extend for next phases (dashboard, CSV uploads, batch logic)
+
+---
+
+# Additional Notes for Replit AI
+- You may use React, Vue, Svelte, Angular, Next.js, or plain HTML/CSS/JS for frontend
+- You may use Node.js/Express, Fastify, Django, Flask, or any backend you choose
+- Styling should match the colour palette and modern design tone
+- Ensure all pages are responsive on mobile, tablet, and desktop
+- Generate placeholder data where necessary to simulate plans and users
+- Comments in code should explain where next phase features will integrate

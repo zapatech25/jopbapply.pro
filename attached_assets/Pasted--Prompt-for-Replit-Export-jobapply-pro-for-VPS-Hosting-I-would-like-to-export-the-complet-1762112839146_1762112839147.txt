@@ -1,0 +1,66 @@
+### 🧭 Prompt for Replit – Export jobapply.pro for VPS Hosting
+
+I would like to **export the complete jobapply.pro application** from Replit so that it can be hosted on my **own VPS server** instead of Replit’s environment.  
+
+Please do the following in full detail:
+
+---
+
+### **1️⃣ Generate a Deployment Export Package**
+- Prepare the project for external deployment:
+  - Include all backend, frontend, and configuration files.
+  - Ensure `.env` variables are clearly defined and listed (but not exposed — show placeholder keys like `YOUR_DB_URL_HERE`, etc.).
+  - Include any `build` or `dist` directories required for production.
+  - Remove all Replit-specific or internal paths.
+
+---
+
+### **2️⃣ Document Environment & Dependencies**
+Please produce a **step-by-step deployment guide** tailored for a **Ubuntu 22.04 VPS** environment:
+- Required dependencies (Node.js, npm/yarn, PostgreSQL, etc.)
+- How to set up `.env` file and environment variables
+- How to initialise and migrate the database (if applicable)
+- Commands to build the frontend and start the backend (e.g., `npm run build`, `npm start`)
+- Ports that need to be open (e.g., 80/443)
+- Instructions for running the app as a background service using **PM2** or **systemd**
+
+---
+
+### **3️⃣ Generate Docker Support (Optional but Preferred)**
+If possible, please generate:
+- A production-ready **Dockerfile**
+- A **docker-compose.yml** (if there are multiple services such as backend, frontend, and PostgreSQL)
+- All environment variables mapped in `.env.example`
+
+---
+
+### **4️⃣ Prepare Database Migration Scripts**
+- Export all SQL schema migrations or `drizzle`/`prisma`/`sequelize` migration files (depending on the ORM used)
+- Include clear instructions on how to initialise the database schema on my VPS
+
+---
+
+### **5️⃣ Provide Clear Deployment Instructions**
+Once the package is ready:
+- Summarise how to deploy on a VPS step-by-step
+  - Clone repository or upload exported ZIP
+  - Set up `.env`
+  - Run build and start commands
+  - Optional: configure NGINX reverse proxy for domain + SSL
+- Mention any paths or configs that might differ between Replit and my VPS
+
+---
+
+### **6️⃣ Deliverables**
+At the end, please provide:
+- Download link (or zip file) of the full production-ready project
+- `.env.example`
+- Deployment commands summary
+- Dockerfile and docker-compose.yml (if created)
+- Notes on where to adjust for VPS hosting (domain, DB, etc.)
+
+---
+
+**Goal:**  
+I need to host jobapply.pro on my own VPS with the same behaviour as on Replit.  
+Please prepare everything necessary for me to run the app independently and reliably in production.

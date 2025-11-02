@@ -1,0 +1,118 @@
+### 🧭 Prompt for Replit – Full Feature Verification & Flow Update (jobapply.pro)
+
+**Objective:**  
+Please first **investigate and confirm which of the following components, features, and flows already exist** in the current jobapply.pro app.  
+Once identified, prepare and implement a **complete plan** to either **enable, fix, or build missing parts** so that the platform functions exactly as intended in the user journey described below.
+
+---
+
+### **Step 1 – Current Feature Verification**
+
+Please check if the following are already present, and if so, confirm whether they are fully functional:
+
+#### 🔐 User System
+- Registration form (currently only collects email and password)
+- Login form (check if “Forgot Password” is missing)
+- Password reset flow and email sending capability
+- User profile page for editing name, email, and telephone
+- Admin access to view, edit, activate/deactivate users
+- Role-based access control (User / Admin)
+
+#### 💳 Payments & Plans
+- Pricing plan data (check if plans are hardcoded or database-driven)
+- Checkout flow (verify if plan description appears before payment)
+- Payment confirmation logic (post-payment redirects and plan activation)
+- CV enhancement payment flow (£39 add-on)
+
+#### 📄 CV & Application Flow
+- CV upload feature (with ATS check result display)
+- Error handling for CSV uploads (fix “CSV validation failed”)
+- Daily CSV reporting to user dashboards
+- Job role dropdown (admin-configurable from backend)
+- Dashboard display of job applications (date, company, job title, status)
+- CSV/XLSX export option for user application history
+
+#### ⚙️ Admin Functions
+- Admin access to:
+  - Manage pricing plans
+  - Add/edit job roles (for dropdown)
+  - View/edit user profiles
+  - Activate/deactivate user accounts
+  - Upload CSVs to user dashboards
+  - View audit logs or usage metrics
+
+---
+
+### **Step 2 – Intended User Journey (Target Flow)**
+
+If any of the above are missing or not functioning correctly, please implement or restructure the flow as follows:
+
+1. **User Registration / Login**
+   - Registration form should include:
+     - Full Name  
+     - Email Address  
+     - Mobile Telephone Number  
+     - Password  
+   - Add **Forgot Password** link and full reset capability.
+   - Once logged in, redirect user to the **Plans Page**.
+
+2. **Plan Selection & Checkout**
+   - User selects a plan (up to 1000 job applications).
+   - Checkout page must display:
+     - Plan name  
+     - Short plan description  
+     - Total price  
+     - Payment fields  
+   - After payment, redirect to **CV Upload & Setup**.
+
+3. **CV Upload & ATS Check**
+   - User uploads CV.
+   - System runs ATS compatibility check.
+   - User is prompted:
+     > “Would you like to enhance your CV for £39 before applications start?”
+       - If **Yes:** Proceed to £39 enhancement payment, then resume.
+       - If **No:** Proceed to Job Role Selection.
+
+4. **Job Role Selection**
+   - User selects up to **4–5 roles** from a **dropdown list** (populated by admin).
+   - User provides:
+     - Preferred email for responses
+     - Telephone for interviews
+   - Once all info is complete, applications begin.
+
+5. **Dashboard & Reporting**
+   - Users can view all applications in their dashboard.
+   - Daily reports uploaded via CSV file (admin or system automation).
+   - Each record should show:
+     - Date  
+     - Company or Job Board  
+     - Job Title  
+     - Application Status
+   - Users can export data as CSV/XLSX.
+
+6. **Admin Dashboard**
+   - Admin can:
+     - View all users and their plans
+     - Add/edit/delete job roles
+     - Manage pricing plans
+     - Upload CSVs to user dashboards
+     - View and edit user details
+     - Activate/deactivate users
+     - View logs and settings
+
+---
+
+### **Step 3 – Actions for Replit**
+
+1. Identify all currently working features from the above checklist.  
+2. Identify missing or incomplete features.  
+3. Propose the **best approach** to implement missing components and fix broken logic.  
+4. Apply all necessary backend and frontend updates so the full flow works end-to-end as described.  
+5. Ensure all changes are persistent in production, not preview-only.  
+6. Test all flows (registration, payment, CV upload, admin management, CSV upload, dashboard reporting).
+
+---
+
+**Final Deliverable:**  
+A fully functional version of **jobapply.pro** where both users and admins can complete their respective journeys seamlessly, with full plan management, application tracking, and data integrity between backend and frontend.
+

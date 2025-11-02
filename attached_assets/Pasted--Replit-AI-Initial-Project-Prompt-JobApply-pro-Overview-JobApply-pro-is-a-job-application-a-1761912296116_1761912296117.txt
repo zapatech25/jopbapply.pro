@@ -1,0 +1,94 @@
+# Replit AI Initial Project Prompt — JobApply.pro
+
+## Overview
+JobApply.pro is a **job application automation and career support platform** designed to help job seekers streamline their job search while maintaining professionalism and personalisation. The platform combines **application tracking, plan-based submission credits, and CV enhancement services** to make applying for multiple jobs efficient, transparent, and manageable.
+
+The platform should be **mobile-first, modern, and fully responsive**, with a colour scheme of **blue (#0077FF), green (#22C55E), white (#FFFFFF), black (#111827), and gray (#F3F4F6)**. The design should balance **professionalism with approachability**, creating a clean, intuitive, and trustworthy user experience.
+
+---
+
+## Key Features & Workflow
+
+### 1️⃣ User Accounts & Roles
+- Users can register and login securely.
+- Roles:
+  - `user` — can view purchased plans, credits, and application statuses.
+  - `admin` — can manage plans, upload per-user CSVs with application status, and monitor users.
+- Auth should be secure (JWT or session-based).
+
+### 2️⃣ Plans & Credits
+- Seeded plans:
+  - **TRIAL_10** — 10 applications, £9
+  - **APPS_150** — 150 applications, £79
+  - **APPS_300** — 300 applications, £139
+  - **APPS_500** — 500 applications, £199
+  - **APPS_1000** — 1000 applications, £349
+  - **CV_RETOUCH** — service-only, £39
+- Rules:
+  - Each 150 application credits = 7 calendar days of processing.
+  - Admin can create, edit, and deactivate plans.
+- Public pricing page displays all active plans with purchase options.
+
+### 3️⃣ Dashboard & Application Tracking
+- Users have a personal dashboard showing:
+  - Purchased plans
+  - Remaining credits
+  - Application status (populated via CSV uploaded by admin per-user)
+- Admin uploads CSVs that map job application statuses to each user.
+
+### 4️⃣ Frontend Pages
+- `/register` — user registration form
+- `/login` — login form
+- `/pricing` — plans display with CTA buttons
+- Dashboard (placeholder for Phase 1)
+- Future Resources/Blog pages (career tips, interview guides, CV advice — can be monetized later)
+
+### 5️⃣ Admin Features
+- Manage plans (add, edit, deactivate)
+- Upload CSV files for per-user application tracking
+- Monitor user subscriptions and plan usage
+
+### 6️⃣ Design & UX
+- Colour palette: blue, green, white, black, gray
+- Clean, modern, intuitive interface
+- Fully responsive and mobile-first
+- Buttons, cards, forms, and layout must reflect the colour palette
+- Focus on building **trust, credibility, and seamless user experience**
+
+---
+
+## Phase 1 Prompt
+For Phase 1, generate a **Replit-ready MVP** that includes:
+
+1. **Authentication & Roles**
+   - Secure user registration and login
+   - Roles: `user` and `admin`
+   - Admin-only route protection
+
+2. **Plans Catalogue**
+   - Seed plans with the SKUs and rules listed above
+   - Public `/pricing` page displaying active plans
+   - Admin CRUD operations for plans
+
+3. **Frontend Pages**
+   - `/register`
+   - `/login`
+   - `/pricing`
+   - Mobile-first and responsive design
+
+4. **Placeholders**
+   - Dashboard page (user credits & plans)
+   - CSV upload functionality (admin per-user)
+
+5. **Replit Stack & Structure**
+   - Replit AI is free to choose the tech stack (frontend + backend) and folder structure
+   - Ensure modularity for future phases
+
+6. **Styling**
+   - Follow the specified colour palette and design tone
+   - Modern, professional, yet approachable interface
+
+---
+
+**Instruction to Replit AI:**  
+Understand the context above. Phase 1 focuses on **Auth, Roles, Plans, and Public Pricing Page** with mobile-first responsive design. Implement placeholders for dashboard and CSV upload. Generate code ready to run, and structure it in a modular way so future phases can be added.
